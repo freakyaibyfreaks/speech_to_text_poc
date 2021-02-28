@@ -1,0 +1,22 @@
+1. sudo apt-get update
+
+2. Install python3-venv library
+   sudo apt-get install python3-venv
+
+3. create a virtualenvironment
+    python3 -m venv env
+    
+4. Activate the virtual environment
+    source env/bin/activate
+
+5. Installing Transformer
+    pip3 install -q transformers
+
+6. pip3 install librosa
+
+7.  pip3 install torch torchvision
+
+8. pip3 install ipython
+
+9. Resources for converting audio to different sample rate: 
+    https://audio.online-convert.com/convert-to-wav

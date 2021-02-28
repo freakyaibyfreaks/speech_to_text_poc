@@ -1,0 +1,34 @@
+1. sudo apt-get update
+
+2. Install python3-venv library
+   sudo apt-get install python3-venv
+
+3. create a virtualenvironment
+    python3 -m venv env
+    
+4. Activate the virtual environment
+    source env/bin/activate 
+
+5. pip3 install deepspeech==0.6.0
+
+6. curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.6.0/deepspeech-0.6.0-models.tar.gz
+
+7. tar -xvzf deepspeech-0.6.0-models.tar.gz
+
+8. curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.6.0/audio-0.6.0.tar.gz
+
+9. tar -xvzf audio-0.6.0.tar.gz
+
+10. 
+deepspeech --model deepspeech-0.6.0-models/output_graph.pb --lm deepspeech-0.6.0-models/lm.binary --trie ./deepspeech-0.6.0-models/trie --audio ./audio/2830-3980-0043.wav
+
+deepspeech --model deepspeech-0.6.0-models/output_graph.pb --lm deepspeech-0.6.0-models/lm.binary --trie ./deepspeech-0.6.0-models/trie --audio ./audio/4507-16021-0012.wav
+
+deepspeech --model deepspeech-0.6.0-models/output_graph.pb --lm deepspeech-0.6.0-models/lm.binary --trie ./deepspeech-0.6.0-models/trie --audio ./audio/8455-210777-0068.wav
+
+Note: Examine the output of the last three commands, and you will see results 
+    1. “experience proof less”.
+    2. “why should one halt on the way” .
+    3. “your power is sufficient i said”.
+
+Reference doc: https://www.slanglabs.in/blog/how-to-build-python-transcriber-using-mozilla-deepspeech    
